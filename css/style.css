@@ -1,0 +1,21 @@
+label {
+  font-size: 300%;
+}
+
+.container {
+  width: 350px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  text-align: right;
+}
+
+.op, .cl, .dp {
+  width: 15.45%;
+}
+
+.dig {
+  width: 32.2%;
+}
