@@ -1,5 +1,5 @@
 # fcc-0007
-Simple Calculator
+FreeCodeCamp: Simple Calculator
 
 Packages:
 
