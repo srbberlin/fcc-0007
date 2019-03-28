@@ -10,13 +10,12 @@ var config = {
   img:    __dirname + '/img/**/*'
 }
 
-function reload (cp) {
+function reload (cb) {
   browserSync.reload()
-
-  cp()
+  cb()
 }
 
-function serve (cp) {
+function serve () {
   browserSync({
     server: config.base
   })
@@ -25,8 +24,6 @@ function serve (cp) {
   gulp.watch(config.css, reload)
   gulp.watch(config.js, reload)
   gulp.watch(config.img, reload)
-
-  cp()
 }
 
 exports.default = serve
