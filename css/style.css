@@ -4,10 +4,11 @@ label {
 
 .container {
   width: 350px;
+  margin: 0 auto;
   text-align: center;
 }
 
-input {
+#display {
   width: 100%;
   text-align: right;
 }
