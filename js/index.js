@@ -6,6 +6,7 @@ $(document).ready(function () {
   var lastOp
   var opCount
   var decPoint
+  var negate = false
   var textField = $('#display')
 
   $('.op').click(function () { op(this.textContent) })
@@ -92,7 +93,12 @@ $(document).ready(function () {
       $(textField).val(res + v)
     }
     else if (isOp(lastIn)) {
-      lastIn = lastOp = v
+      if (v != '-') {
+        lastIn = lastOp = v
+      }
+      else {
+        negate = ! negate;
+      }
       if (opCount === 0) {
         opCount++
         addChar (v)
@@ -105,6 +111,10 @@ $(document).ready(function () {
   
   function calc() {
     if (lastOp != '=') {
+      if (negate) {
+        negate = false
+        act = -act;
+      }
       switch (lastOp) {
       case '+': res += act; break
       case '-': res -= act; break
